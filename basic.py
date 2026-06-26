@@ -1,0 +1,16 @@
+port_block = {
+    23: False,
+    80: False,
+    443: True,
+    445: False,
+    53: True,
+    20: False,
+}
+
+incoming_traffic = 23, 80, 443, 53, 53, 20
+
+for log in incoming_traffic:
+    if not port_block.get(log, False):
+        print(f"DENIED PORT: {log}")
+    else:
+        print(f"ALLOWED PORT: {log}")
