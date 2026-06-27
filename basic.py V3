@@ -7,7 +7,7 @@ port_block = {
     20: False,
 }
 
-incoming_traffic = 23, 80, 443, 53, 53, 20
+incoming_traffic = 23, 80, 443, 53, 53, 20, 22, 3389
 
 for log in incoming_traffic:
     if not port_block.get(log, False):
